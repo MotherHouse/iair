@@ -130,7 +130,7 @@
     <string name="sensor_start">Sensor recording started.</string>
     <!-- description: [Toast prompt when sensor stop to catch sample value] -->
     <string name="sensor_stop">Sensor recording stopped.</string>
-    <string name="sensor_description">The MDK Sensor Card has a temperature sensor.  This provides reading the temperature date from the sensor.</string>
+    <string name="sensor_description">PM2.5</string>
     <string name="attach_pcard">Please insert the Sensor Personality Card and attach the Reference Moto Mod.</string>
     <string name="mdk_switch">Please detach the Reference Moto Mod and insert the Sensor Personality Card.</string>
     <!-- description: [The Dip switch config title prompt] -->

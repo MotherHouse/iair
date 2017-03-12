@@ -29,7 +29,6 @@
 package com.motorola.samples.mdksensor;
 
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -38,19 +37,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.motorola.mod.ModDevice;
 import com.motorola.mod.ModManager;
@@ -70,7 +69,7 @@ import lecho.lib.hellocharts.view.LineChartView;
 /**
  * A class to represent main activity.
  */
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static final String MOD_UID = "mod_uid";
 
     private static final int RAW_PERMISSION_REQUEST_CODE = 100;
@@ -87,6 +86,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private static float maxTop = 80f;
     private static float minTop = 70f;
     private LineChartView chart;
+
     private Viewport viewPort;
 
     /** Handler for events from mod device */
@@ -126,8 +126,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+/*
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setActionBar(toolbar);
+*/
+
+//        getSupportActionBar().hide();
 
         LinearLayout dipTitle = (LinearLayout)findViewById(R.id.layout_dip_description_title);
         dipTitle.setOnClickListener(new View.OnClickListener() {

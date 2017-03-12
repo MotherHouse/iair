@@ -26,12 +26,28 @@
 	ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <resources>
-    <color name="colorPrimary">@android:color/holo_blue_light</color>
-    <color name="colorPrimaryDark">@android:color/holo_blue_dark</color>
-    <color name="colorAccent">@color/colorPrimary</color>
+
     <color name="disabled_button">#EEEEEE</color>
 
     <color name="mod_match">@android:color/holo_green_light</color>
     <color name="mod_mismatch">@android:color/holo_red_light</color>
     <color name="mod_na">@android:color/tertiary_text_light</color>
+
+
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorPrimaryLight">#42A5F5</color>
+
+    <color name="colorAccent">#FFC107</color>
+    <color name="colorAccentDark">#FFB300</color>
+    <color name="colorAccentLight">#FFCA28</color>
+
+    <color name="grey_dark">#37474F</color>
+    <color name="grey_hard">#96989A</color>
+    <color name="grey_medium">#BDBFC1</color>
+    <color name="grey_soft">#F5F5F5</color>
+
+    <color name="grey_bg">#E6E6E6</color>
+
+    <color name="icon_drawer_color">#727272</color>
 </resources>

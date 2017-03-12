@@ -32,13 +32,6 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="?android:attr/colorPrimary"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <include layout="@layout/content_main" />
 

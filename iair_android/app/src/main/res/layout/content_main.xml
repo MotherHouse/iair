@@ -35,13 +35,192 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linear"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/bg"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="25dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:padding="16dp">
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="iAir"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="50dp"
+                android:padding="16dp">
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="善待每一口空气"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    />
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom">
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+
+                            />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:id="@+id/signin1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=""
+
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="#85ffffff"
+                            />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/avatar"
+
+                        android:gravity="bottom"
+
+                        />
+
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+
+                            />
+
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:id="@+id/signup1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text=""
+                            android:layout_gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="#85ffffff"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
         <include layout="@layout/card_general_info" />
 
         <include layout="@layout/card_dip_switch_configuration" />
 
-        <include layout="@layout/card_mod_controller" />
-
         <include layout="@layout/card_external_links" />
+
+        <include layout="@layout/card_mod_controller" />
 
     </LinearLayout>
 </ScrollView>
