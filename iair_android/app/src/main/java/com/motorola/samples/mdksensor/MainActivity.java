@@ -51,6 +51,11 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.motorola.mod.ModDevice;
 import com.motorola.mod.ModManager;
 
@@ -74,6 +79,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final int RAW_PERMISSION_REQUEST_CODE = 100;
 
+    public static RequestQueue queues;
+
+    public String air_value;
+
+
+    //服务器URL
+
+    public final static String server_url = "http://www.leavenotrace.cn:8066/";
     /**
      * Instance of MDK Personality Card interface
      */
@@ -133,6 +146,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        getSupportActionBar().hide();
 
+        queues = Volley.newRequestQueue(getApplicationContext());
         LinearLayout dipTitle = (LinearLayout)findViewById(R.id.layout_dip_description_title);
         dipTitle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -677,6 +691,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 viewPort.bottom = minTop;  //min value
                 chart.setMaximumViewport(viewPort);
                 chart.setCurrentViewport(viewPort);
+                air_value = String.valueOf(temp);
+                updateairdata();
             }
         } else if (cmd == Constants.TEMP_RAW_COMMAND_CHALLENGE) {
             /** Got CHALLENGE command from personality board */
@@ -746,4 +762,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
+
+
+    public void updateairdata() {
+
+           String url = server_url + "syncdata?method=insertair&airvalue="+air_value;
+            StringRequest stringRequest = new StringRequest(url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+
+                        }
+                    }
+
+            );
+
+            getHttpQueues().add(stringRequest);
+    }
+
+    public static RequestQueue getHttpQueues() {
+
+        return queues;
+    }
+
 }
